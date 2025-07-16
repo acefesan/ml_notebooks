@@ -166,14 +166,10 @@ class ToyCNN(nn.Module):
         self.linear = nn.Linear(784,784)
 
     def forward(self, x):
-        # x = x.view(784)
-        # x = self.linear(x)
-        # x = x.view(1,28,28)
+
 
         x = self.conv1(x)
-        x = self.conv2(x)
-        #x = self.conv3(x)
-
-
-
+        x = F.relu(self.conv2(x))
+        x = self.conv3(x)
+        
         return x
