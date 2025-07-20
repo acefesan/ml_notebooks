@@ -1,21 +1,13 @@
-[tool.poetry]
+[project]
 name = "ml-notebooks"
 version = "0.1.0"
-description = ""
-authors = ["Adrian Sanchez <adriancefsanchez@gmail.com>"]
+description = "Add your description here"
 readme = "README.md"
-package-mode = false
+requires-python = ">=3.9"
+dependencies = [
+    "pygame>=2.6.1",
+]
 
-[tool.poetry.dependencies]
-python = ">=3.9,<3.11"
-torch = "*"
-torchvision = "*"
-matplotlib = "*"
-numpy = "<2.0"
-tqdm = "*"
-scikit-learn = "<1.4"
-seaborn = "^0.13.2"
 
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[tool.pylance]
+typeCheckingMode = "basic" 
